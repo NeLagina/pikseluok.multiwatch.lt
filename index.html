@@ -11,7 +11,7 @@
         const urlParams = new URLSearchParams(queryString);
         const mode = urlParams.get(`img`);
         window.onload = function() {
-            // similar behavior as clicking on a link
+       
             const multiwatchlogo = "https://pikseliuok.lt/#x=281&y=106&scale=50&template=https%3A%2F%2Fpikseluok.multiwatch.lt%2Flogo.png&ox=260&oy=72&tw=45&title=multiwatch.LT%20logo&convert=nearestCustom";
         if (mode == "multiwatch") {
             window.location.href = multiwatchlogo;
@@ -36,9 +36,11 @@
         }else if (mode == "sefasiu") {
             window.location.href = "https://pikseliuok.lt/#x=145&y=118&scale=2.34&template=https%3A%2F%2Fpikseliuok.multiwatch.lt%2Fsefasiu.png&ox=0&oy=65&tw=100&title=SEFASIU&convert=nearestCustom"
         }else if (mode == "domas") {
-            window.location.href = "https://pikseliuok.lt/#x=287&y=249&scale=5.04&template=https%3A%2F%2Fpikseliuok.multiwatch.lt%2Fdomasas.png&ox=252&oy=244&tw=25&title=multiwatch.LT%20logo&convert=nearestCustom"
+            window.location.href = "https://pikseliuok.lt/#x=287&y=249&scale=5.04&template=https%3A%2F%2Fpikseliuok.multiwatch.lt%2Fdomasas.png&ox=252&oy=244&tw=25&title=multiwatch.LT%20domas&convert=nearestCustom"
         }else if (mode == "goldas") {
-            window.location.href = "https://pikseliuok.lt/#x=366&y=170&scale=5.04&template=https%3A%2F%2Fpikseluok.multiwatch.lt%2Fgoldas.png&ox=319&oy=172&tw=20&title=multiwatch.LT%20logo&convert=nearestCustom"
+            window.location.href = "https://pikseliuok.lt/#x=366&y=170&scale=5.04&template=https%3A%2F%2Fpikseluok.multiwatch.lt%2Fgoldas.png&ox=319&oy=172&tw=20&title=multiwatch.LT%20goldas&convert=nearestCustom"
+        }else if (mode == "hloperis") {
+            window.location.href = "https://pikseliuok.lt/#x=600&y=227&scale=5.04&template=https%3A%2F%2Fpikseluok.multiwatch.lt%2Fhloperis.png&ox=600&oy=227&tw=20&title=multiwatch.LT%20hloper%20logo&convert=nearestCustom"
         }else {
             window.location.href = multiwatchlogo;
         }
