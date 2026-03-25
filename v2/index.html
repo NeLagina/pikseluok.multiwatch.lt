@@ -9,9 +9,9 @@
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const mode = urlParams.get("img")
+        const mode = urlParams.get("img");
 
-        const baseUrl = "https://pikseliuok.multiwatch.lt/";
+        const baseUrl = "https://dc.multiwatch.lt/#";
         const dataUrl = "./data.json";
 
         function buildUrl(entry) {
@@ -34,19 +34,17 @@
             try {
                 const response = await fetch(dataUrl);
                 const data = await response.json();
-                
-                if (!mode) {
-                     window.location.href = "https://dc.multiwatch.lt"
-                }
-                const entry = data[mode];
+
+                const entry = mode ? data[mode] : null;
 
                 if (!entry) {
+                    window.location.href = "https://dc.multiwatch.lt";
                     return;
                 }
 
                 window.location.href = buildUrl(entry);
             } catch (error) {
-                window.location.href = "https://dc.multiwatch.lt"
+                window.location.href = "https://dc.multiwatch.lt";
             }
         };
     </script>
