@@ -9,7 +9,7 @@
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const mode = urlParams.get("img") || "multiwatch";
+        const mode = urlParams.get("img")
 
         const baseUrl = "https://pikseliuok.multiwatch.lt/";
         const dataUrl = "./data.json";
@@ -35,7 +35,7 @@
                 const response = await fetch(dataUrl);
                 const data = await response.json();
                 
-                if (mode == "multiwatch") {
+                if (!mode) {
                      window.location.href = "https://dc.multiwatch.lt"
                 }
                 const entry = data[mode];
